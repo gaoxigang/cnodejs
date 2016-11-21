@@ -1,0 +1,41 @@
+<view class="cnodeall">
+    <view class="banner">
+        <image src="../../images/nodjstou.jpg" mode="aspectFit" />
+    </view>
+
+    <view class="userinfo">
+        <view class="usertitle"><navigator url="../index/index" redirect="true"><text>主页</text></navigator> | <text>用户中心</text></view>
+        <view class="userimage">
+            <image src="{{userinfo.avatar_url}}"/>
+            <text>{{userinfo.loginname}}</text>
+        </view>
+        <view class="userjifen">{{userinfo.score}} 积分</view>
+        <view class="usershoucang">2个话题收藏</view>
+        <view class="userurl"><i><image src="../../images/home.png" /></i>https://github.com/{{userinfo.githubUsername}}</view>
+        <view class="usergithub"><i><image src="../../images/github.png" /></i>@{{userinfo.githubUsername}}</view>
+        <view class="usertime">注册时间: {{userinfo.create_at}}</view>
+    </view>
+
+    <view class="usertopics">
+        <view class="usertptitle">最新创建的话题</view>
+        <view class="usertpcon">
+            <block wx:for="{{userinfo.recent_topics}}">
+                <view class="list">
+                    <view class="cnodelimg" catchtap="toUser" id="{{item.author.loginname}}">
+                        <image src="{{item.author.avatar_url}}" />
+                    </view>
+                    <view wx:if="{{item.tab == 'share'}}" class="cnodetabjh"><text>分享</text></view>
+                    <view wx:elif="{{item.tab == 'ask'}}" class="cnodetab"><text>问答</text></view>
+                    <view wx:elif="{{item.tab == 'job'}}" class="cnodetabjob"><text>招聘</text></view>
+                    <view wx:elif="{{item.tab == 'good'}}" class="cnodetabjh"><text>精华</text></view>
+                    <view class="cnodetitle">
+                        <view class="cndoett"><text>{{item.title}}</text></view>
+                        <view class="cndoefollow">
+                            <text>3天前</text>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>
