@@ -1,0 +1,24 @@
+<view class="cnodeall">
+    <view class="banner">
+        <image src="../../images/nodjstou.jpg" mode="aspectFit" />
+    </view>
+
+    <block wx:for="{{topics}}">
+        <view class="list">
+            <view class="cnodelimg" catchtap="toUser" id="{{item.author.loginname}}">
+                <image src="{{item.author.avatar_url}}" />
+            </view>
+            <view wx:if="{{item.tab == 'share'}}" class="cnodetab"><text class="textjh">分享</text></view>
+            <view wx:elif="{{item.tab == 'ask'}}" class="cnodetab"><text class="textwd">问答</text></view>
+            <view wx:elif="{{item.tab == 'job'}}" class="cnodetab"><text class="textjob">招聘</text></view>
+            <view wx:elif="{{item.tab == 'good'}}" class="cnodetab"><text class="textjh">精华</text></view>
+            <view class="cnodetitle">
+                <view class="cndoett"><text>{{item.title}}</text></view>
+                <view class="cndoefollow">
+                    <text>{{item.author.loginname}}</text>
+                    <text>{{lasttime[index]}}</text>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

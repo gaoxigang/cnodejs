@@ -4,7 +4,7 @@ var app = getApp()
 Page({
   data:{
     topics:[],
-    lasttime:null
+    lasttime:[]
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
@@ -17,7 +17,14 @@ Page({
         // success
         
         that.setData({topics:res.data.data})
-        console.log(that.data.topics)
+        //console.log(that.data.topics)
+        var datalength = res.data.data.length
+        var lastime = []
+        for (let i = 0; i < datalength; ++i) {          
+          lastime[i] = app.getDateDiff(res.data.data[i].last_reply_at)
+        }
+        that.setData({lasttime:lastime})
+        //console.log(lastime)
       },
       fail: function() {
         // fail

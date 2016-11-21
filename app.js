@@ -24,18 +24,22 @@ App({
       })
     }
   },
+
   globalData:{
     userInfo:null
   },
 
   getDateDiff:function(dateTimeStamp){
+    var lasttime2 = dateTimeStamp.replace(/T/gi," ")
+    var lasttime1 = lasttime2.substring(0,19)
+    var lasttime = Date.parse(lasttime1.replace(/-/gi,"/"))
     var minute = 1000 * 60;
     var hour = minute * 60;
     var day = hour * 24;
     var halfamonth = day * 15;
     var month = day * 30;
     var now = new Date().getTime();
-    var diffValue = now - dateTimeStamp;
+    var diffValue = now - lasttime;
     if(diffValue < 0){return;}
     var monthC =diffValue/month;
     var weekC =diffValue/(7*day);
@@ -60,6 +64,8 @@ App({
     result="刚刚";
     return result;
   }
+
+
 })
 
 

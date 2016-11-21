@@ -9,15 +9,17 @@
             <view class="cnodelimg" catchtap="toUser" id="{{item.author.loginname}}">
                 <image src="{{item.author.avatar_url}}" />
             </view>
-            <view wx:if="{{item.tab == 'share'}}" class="cnodetabjh"><text>分享</text></view>
-            <view wx:elif="{{item.tab == 'ask'}}" class="cnodetab"><text>问答</text></view>
-            <view wx:elif="{{item.tab == 'job'}}" class="cnodetabjob"><text>招聘</text></view>
-            <view wx:elif="{{item.tab == 'good'}}" class="cnodetabjh"><text>精华</text></view>
+            <view wx:if="{{item.good == true}}" class="cnodetab"><text class="textjh">精华</text></view>
+            <view wx:elif="{{item.top == true}}" class="cnodetab"><text class="textzd">置顶</text></view>
+            <view wx:elif="{{item.tab == 'share'}}" class="cnodetab"><text class="textjh">分享</text></view>
+            <view wx:elif="{{item.tab == 'ask'}}" class="cnodetab"><text class="textwd">问答</text></view>
+            <view wx:elif="{{item.tab == 'job'}}" class="cnodetab"><text class="textjob">招聘</text></view>
+            
             <view class="cnodetitle">
                 <view class="cndoett"><text>{{item.title}}</text></view>
                 <view class="cndoefollow">
                     <text>{{item.author.loginname}}</text>
-                    <text>3天前</text>
+                    <text>{{lasttime[index]}}</text>
                 </view>
             </view>
         </view>

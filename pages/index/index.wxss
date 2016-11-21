@@ -32,7 +32,7 @@
     display: flex;
     align-items: center;
 }
-.cnodetab text{
+.cnodetab .textwd{
     color: #ffffff;
     background-color: #ffbe00;
     width: 24px;
@@ -40,8 +40,10 @@
     font-size: 11.3px;
     padding: 1px;
     border-radius: 3px;  
+    display: flex;
+    align-items: center;
 }
-.cnodetabjh text{
+.cnodetab .textjh{
     color: #ffffff;
     background-color: #1aad19;
     width: 24px;
@@ -49,8 +51,10 @@
     font-size: 11.3px;
     padding: 1px;
     border-radius: 3px;
+    display: flex;
+    align-items: center;
 }
-.cnodetabjob text{
+.cnodetab .textjob{
     color: #ffffff;
     background-color: #10aeff;
     width: 24px;
@@ -58,17 +62,30 @@
     font-size: 11.3px;
     padding: 1px;
     border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+.cnodetab .textzd{
+    color: #ffffff;
+    background-color: #f76260;
+    width: 24px;
+    height: 16px;
+    font-size: 11.3px;
+    padding: 1px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
 }
 .cnodetitle{
     display: flex;
     flex-direction: column;
     padding-left:8px; 
     padding-top:8px;
-    width: 76%;
+    width: 80%;
 }
 .cndoett{
     font-size: 14px;
-    width: 80%;
+    width: 85%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -79,4 +96,5 @@
     justify-content: space-between;
     padding-right:8px; 
     color: #888888;
+    padding-top: 3px;
 }
