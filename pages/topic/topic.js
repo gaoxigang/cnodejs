@@ -1,10 +1,26 @@
 Page({
   data:{
-    
+    topic:[]
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
-    
+    //console.log(options.id)
+    var that = this;
+    wx.request({
+      url: 'http://cnodejs.org/api/v1/topic/'+options.id,
+      method: 'GET', 
+      success: function(res){
+        // success
+        console.log(res.data.data)
+        that.setData({topic:res.data.data})
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
   },
   onReady:function(){
     // 页面渲染完成

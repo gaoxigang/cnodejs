@@ -1,0 +1,106 @@
+@import "../index/index.wxss";
+.cnodeall{
+    display: flex;
+    flex-direction: column;
+}
+.banner{
+    margin: 0 auto;
+    height: 130px;
+}
+.banner image{
+    width: 320px;
+    height: 130px;
+}
+.topiccontent{
+    width: 94%;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+}
+.contitle{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+    border-top: 1px solid #dfdfdf;
+    background: linear-gradient(#f6f6f6, #dfdfdf);
+    height: 28px;
+    padding-left: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.confutitle{
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #ececec;
+    height: 33px;
+    padding: 5px;
+    font-size: 12px;
+    color: #888888;
+    display: flex;
+    align-items: center;
+}
+.concontent{
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    padding: 15px;
+}
+
+.topiccomment{
+    width: 94%;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+}
+.conttitle{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+    border-top: 1px solid #dfdfdf;
+    background: linear-gradient(#f6f6f6, #dfdfdf);
+    height: 28px;
+    padding-left: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;   
+}
+.contnr{
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #ececec;
+    padding: 5px;
+    font-size: 14px;
+}
+.contnruser{
+    display: flex;
+    flex-direction: row;
+}
+.cnuserimg{
+    width: 28px;
+    height: 28px;
+}
+.cnusername{
+    margin-left:5px;
+    font-size: 13px;
+    color: #888888;
+}
+.cnuserother{
+    margin-left:5px;
+    font-size: 13px;  
+    color: #10aeff;
+}
+.contnrnr{
+    font-size: 14px; 
+}
+.cnodetab{
+    font-weight: normal;
+    margin-right: 5px;
+    margin-left: 5px;
+}

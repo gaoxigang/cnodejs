@@ -1,0 +1,31 @@
+<view class="cnodeall">
+
+    <view class="banner">
+        <image src="../../images/nodjstou.jpg" mode="aspectFit" />
+    </view>
+
+    <view class="topiccontent">
+        <view class="contitle">
+            <view wx:if="{{topic.good == true}}" class="cnodetab"><text class="textjh">精华</text></view>
+            <view wx:elif="{{topic.top == true}}" class="cnodetab"><text class="textzd">置顶</text></view>
+            {{topic.title}}
+        </view>
+        <view class="confutitle">Content</view>
+        <view class="concontent">Content</view>
+
+    </view>
+
+    <view class="topiccomment">
+        <view class="conttitle">多少条回复</view>
+
+        <view class="contnr">
+            <view class="contnruser">
+                <image class="cnuserimg" src="" />
+                <text class="cnusername">text</text>
+                <text class="cnuserother">text</text>
+            </view>
+            <view class="contnrnr">Content</view>
+        </view>
+    </view>
+
+</view>  

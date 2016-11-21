@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/cream/cream",
     "pages/ask/ask",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/topic/topic"
   ],
   "window":{
     "backgroundTextStyle":"light",
