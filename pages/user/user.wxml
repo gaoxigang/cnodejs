@@ -29,7 +29,7 @@
                     <view wx:elif="{{item.tab == 'job'}}" class="cnodetabjob"><text>招聘</text></view>
                     <view wx:elif="{{item.tab == 'good'}}" class="cnodetabjh"><text>精华</text></view>
                     <view class="cnodetitle">
-                        <view class="cndoett"><text>{{item.title}}</text></view>
+                        <view class="cndoett" catchtap="gotoContent" id="{{item.id}}"><text>{{item.title}}</text></view>
                         <view class="cndoefollow">
                             <text>3天前</text>
                         </view>

@@ -10,21 +10,23 @@
             <view wx:elif="{{topic.top == true}}" class="cnodetab"><text class="textzd">置顶</text></view>
             {{topic.title}}
         </view>
-        <view class="confutitle">Content</view>
-        <view class="concontent">Content</view>
+        <view class="confutitle">
+            ·发表于{{lasttime}}  ·作者：{{topic.author.loginname}}  ·{{topic.visit_count}}次浏览     
+        </view>
+        <view class="concontent">{{topic.content}}</view>
 
     </view>
 
     <view class="topiccomment">
-        <view class="conttitle">多少条回复</view>
+        <view class="conttitle">{{topic.reply_count}}条回复</view>
 
-        <view class="contnr">
+        <view class="contnr" wx:for="{{topic.replies}}">
             <view class="contnruser">
-                <image class="cnuserimg" src="" />
-                <text class="cnusername">text</text>
-                <text class="cnuserother">text</text>
+                <image class="cnuserimg" catchtap="toUser" id="{{item.author.loginname}}" src="{{item.author.avatar_url}}" />
+                <text class="cnusername">{{item.author.loginname}}</text>
+                <text class="cnuserother">{{index+1}}楼</text>
             </view>
-            <view class="contnrnr">Content</view>
+            <view class="contnrnr">{{item.content}}</view>
         </view>
     </view>
 

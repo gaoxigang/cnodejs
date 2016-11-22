@@ -47,6 +47,8 @@
     border-right: 1px solid #dfdfdf;
     border-bottom: 1px solid #dfdfdf;
     padding: 15px;
+    font-size: 14px;
+    word-wrap: break-word;
 }
 
 .topiccomment{
@@ -97,7 +99,7 @@
     color: #10aeff;
 }
 .contnrnr{
-    font-size: 14px; 
+    font-size: 13.3px; 
 }
 .cnodetab{
     font-weight: normal;

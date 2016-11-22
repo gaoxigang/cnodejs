@@ -13,7 +13,7 @@
             <view wx:elif="{{item.tab == 'job'}}" class="cnodetab"><text class="textjob">招聘</text></view>
             <view wx:elif="{{item.tab == 'good'}}" class="cnodetab"><text class="textjh">精华</text></view>
             <view class="cnodetitle">
-                <view class="cndoett"><text>{{item.title}}</text></view>
+                <view class="cndoett" catchtap="gotoContent" id="{{item.id}}"><text>{{item.title}}</text></view>
                 <view class="cndoefollow">
                     <text>{{item.author.loginname}}</text>
                     <text>{{lasttime[index]}}</text>

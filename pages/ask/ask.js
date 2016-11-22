@@ -65,5 +65,21 @@ Page({
         // complete
       }
     })
-  }
+  },
+
+  gotoContent:function(event){
+      wx.navigateTo({
+        url: '../topic/topic?id='+event.currentTarget.id,
+        success: function(res){
+          //console.log(event.currentTarget.id)
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
+    }
+
 })
